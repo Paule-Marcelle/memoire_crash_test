@@ -9,8 +9,7 @@ bearer_token = "AAAAAAAAAAAAAAAAAAAAALhDwgEAAAAAPXaZF2r7osdcG20GdtIRp%2BbR6go%3D
 client = tweepy.Client(bearer_token=bearer_token)
 
 # Liste des mots-clés
-keywords = ["domestic violence", "abuse", "toxic relationship","mistreatment", "gaslighting","emotional abuse", "physical abuse"]
-
+keywords = ["#StopViolence", "#MeToo","Cyberbullying","abuse"]
 # Liste pour stocker les tweets
 tweetsdata = []
 
@@ -41,5 +40,5 @@ for keyword in keywords:
 
 # Convertir les données en DataFrame et sauvegarder dans un fichier CSV
 df = pd.DataFrame(tweetsdata)
-df.to_csv("tweets_data.csv", index=False)
-print("Les tweets ont été sauvegardés dans tweets_data.csv")
+df.to_csv("tweetsdata.csv", index=False)
+print("Les tweets ont été sauvegardés dans tweetsdata.csv")
