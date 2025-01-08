@@ -10,8 +10,18 @@ reddit = praw.Reddit(
 )
 
 # Définir les mots-clés et subreddits
-keywords = ["domestic violence", "abuse", "survivor","cyberbullying","mistreatment","abused woman","domestic violence survivor","emotional abuse","physical abuse","verbal abuse","toxic relationship","manipulation","gaslighting","breaking free","trauma recovery","abusive partner"]
-subreddits = ["relationships", "AbuseSurvivors","offmychest","depression","relationship_advice","TwoXChromosomes","mentalhealth", "TrueOffMyChest", "AskWomen"]
+#keywords = [ "abuse", "survivor","cyberbullying","mistreatment","abused woman","domestic violence survivor","emotional abuse","physical abuse","verbal abuse","toxic relationship","manipulation","gaslighting","breaking free","trauma recovery","abusive partner"]
+#subreddits = ["relationships", "AbuseSurvivors","offmychest","depression","relationship_advice","TwoXChromosomes","mentalhealth", "TrueOffMyChest", "AskWomen"]
+
+keywords= [
+    "happy relationship", "healthy relationship", "positive vibes", "gratitude",
+    "self-care", "personal growth", "relationship success", "love and support"
+]
+
+subreddits= [
+    "happy", "relationships", "selfimprovement", "KindVoice", "Marriage",
+    "healthyliving", "UpliftingNews", "CasualConversation"
+]
 posts = []  # Liste pour stocker les résultats
 
 # Boucle pour parcourir chaque subreddit et mot-clé
@@ -33,7 +43,7 @@ for subreddit_name in subreddits:
 # Convertir les données en DataFrame et les sauvegarder dans un CSV
 df = pd.DataFrame(posts)
 if not df.empty:
-    df.to_csv("reddit_data.csv", index=False)
+    df.to_csv("reddit_good.csv", index=False)
     print("Les données ont été sauvegardées dans reddit_posts.csv")
 else:
     print("Aucun post trouvé avec les paramètres donnés.")

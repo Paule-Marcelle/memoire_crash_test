@@ -9,7 +9,7 @@ bearer_token = "AAAAAAAAAAAAAAAAAAAAALhDwgEAAAAAPXaZF2r7osdcG20GdtIRp%2BbR6go%3D
 client = tweepy.Client(bearer_token=bearer_token)
 
 # Liste des mots-clés
-keywords = ["domestic violence", "abuse", "toxic relationship","mistreatment", "gaslighting","emotional abuse", "physical abuse"]
+keywords = ["healthy relationship", "support", "confidence","safe", "safety","respect"]
 
 # Liste pour stocker les tweets
 tweetsdata = []
